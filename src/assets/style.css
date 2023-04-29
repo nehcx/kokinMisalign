@@ -1,0 +1,15 @@
+body {
+  max-width: 1000px;
+  min-width: 1000px;
+  margin: auto;
+  padding: 1em;
+  line-height: 1.5;
+}
+
+/* header and footer areas */
+.title { font-size: 1.1em; }
+footer a { text-decoration: none; }
+hr {
+  border-style: dashed;
+  color: #ddd;
+}

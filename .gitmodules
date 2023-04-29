@@ -1,0 +1,4 @@
+[submodule "data/hachidaishu"]
+	path = data/hachidaishu
+	url = https://github.com/yamagen/hachidaishu
+	branch = match-up-nil

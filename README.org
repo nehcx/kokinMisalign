@@ -1,0 +1,117 @@
+#+bibliography: ./data/translations/raw_data.bib
+
+* misalignVis
+This repository was created to present clues to access the connotation
+of classical poetic Japanese vocabulary, a.k.a. words used in /Waka/
+和歌, by using contemporary Japanese translation words misaligned with
+IBM Model 2.
+
+The repository provides the training data, process, and several
+visualization tools for the above purposes.
+
+** Requirements
+The repository works with python 3.8.3, requiring python libraries
+listed in [[https://github.com/nehcx/misalignVis/blob/master/requirements.txt][requirements.lock]].
+
+** Data
+*** /Kokin Wakashū/ 古今和歌集
+The /Kokin Wakashū/ (ca. 905) is an anthology of classical Japanese
+poetry. The /Kokin Wakashū/ dataset is obtained from
+[[https://github.com/yamagen/hachidaishu][the /Hachidaishū/ dataset]].
+
+The data format follows so-called [[https://github.com/idiig/misalign-viz/tree/master/data/hachidaishu#hachidaidb-database-format][hachidai.db database format]].
+
+*** 10 contemporary Japanese translations
+The complete list of the contemporary Japanese translations of /Kokin
+Wakashū/ used in the repository can be found in
+[[https://github.com/nehcx/misalignVis/blob/master/data/translations/raw_data.bib][raw_data.bib]].
+
+All texts were tokenized with the same format with [[https://github.com/yamagen/hachidaishu][the /Hachidaishū/
+dataset]]. Part of raw data was stripped off for not infringing the full
+texts' copyright. All raw data related to the replication was
+remained.
+
+*** Data summary
+The data summary is shown in the following table:
+|                                                                            |     # of tokens | # of types |     # of texts |
+|----------------------------------------------------------------------------+-----------------+------------+----------------|
+| [cite/t/cf:@kaneko_kokinwakashu_1933_ja]                                   |           42439 |       3356 |           1000 |
+| [cite/t/cf:@katagiri_kokinwakashu_1998_ja]                                 |           36362 |       2882 |           1000 |
+| [cite/t/cf:@kojima_kokinwakashu_1989_ja]                                   |           33867 |       2955 |           1000 |
+| [cite/t/cf:@komachiya_kokinwakashugendaigo_1982_ja]                        |           30869 |       2692 |           1000 |
+| [cite/t/cf:@kubota_kokinwakashu_1960_ja]                                   |           32210 |       2701 |           1000 |
+| [cite/t/cf:@kyusojin_kokinwakashu_1979_ja]                                 |           34050 |       2770 |           1000 |
+| [cite/t/cf:@matsuda_shinshaku_1968_ja]                                     |           31860 |       3007 |           1000 |
+| [cite/t/cf:@okumura_kokinwakashu_1978_ja]                                  |           32321 |       3153 |           1000 |
+| [cite/t/cf:@ozawa_kokinwakashu_1971_ja]                                    |           36173 |       3384 |           1000 |
+| [cite/t/cf:@takeoka_kokinwakashu_1976_ja]                                  |           29844 |       2861 |           1000 |
+|----------------------------------------------------------------------------+-----------------+------------+----------------|
+| total                                                                      |          339995 |       8252 |          10000 |
+|----------------------------------------------------------------------------+-----------------+------------+----------------|
+| /Kokinshu/ part in /Hachidaishu/ dataset [cite:@hodoscek_development_2022] | 16687 \times 10 |       1496 | 1000 \times 10 |
+
+** Alignment models
+The repository used IBM Model 2 inplemented in [[https://www.nltk.org/][NLTK]] to align bitexts
+from source texts to target texts and from target texts to source
+texts. The accuracy information was calculated with [[https://github.com/nehcx/misalignVis/blob/master/src/accuracy.py][accuracy.py]] as
+the following table (intersection means alignment that was inferred by
+both of the two direction).
+
+| model     | source → target | target → source | intersection |
+|-----------+-----------------+-----------------+--------------|
+| precision |           58.62 |           39.26 |        74.27 |
+| recall    |           77.12 |           88.58 |        74.11 |
+| AER       |           33.93 |           46.95 |        25.80 |
+
+The calculation was based on the matching ratio of the wlsp codes of
+aligned word pairs. Compared to manual evaluation, this calculation
+count many correct cases as wrong, which may cause the accuracy to be
+reletively low.
+
+** Usage
+Use the Dashboard.
+#+BEGIN_SRC sh :results raw
+  git clone -b master --depth=1 --recursive https://github.com/nehcx/misalignVis.git  # Clone the repository
+  cd misalignVis
+  make app
+#+END_SRC
+
+** Replication
+Replication via [[https://docker.com][Docker]] or notebook [[https://github.com/nehcx/misalignVis/blob/master/replication.ipynb][notebook]].
+
+Procedure of replication via [[https://docker.com][Docker]] is as follows.
+
+#+BEGIN_SRC sh :results raw
+  git clone https://github.com/nehcx/misalignVis.git  # Clone the repository
+  cd misalignVis
+  docker build --no-cache -t nehcx/misalignVis .  
+#+END_SRC
+
+Excute the following:
+#+BEGIN_SRC sh
+  docker run -it --rm nehcx/misalignVis bash  # enter bash
+  root@370280a4058b:/opt/app# cd misalignVis/
+  root@370280a4058b:/opt/app/misalign-viz# make build_bitext  # make bitexts.csv
+  root@370280a4058b:/opt/app/misalign-viz# make build_metacode2lemma_dict  # make metacode2lemma dictionary
+  root@370280a4058b:/opt/app/misalign-viz# make train_save_ibm2  # train and save ibm model 2
+  root@370280a4058b:/opt/app/misalign-viz# make save_db  # Save database for query
+  root@370280a4058b:/opt/app/misalign-viz# make basic_stat  # Save database basic statistic description
+  root@370280a4058b:/opt/app/misalign-viz# make accuracy  # Save precision, recall and AER
+  root@370280a4058b:/opt/app/misalign-viz# make plot_aligment <any words>  # alignment visualization
+  root@370280a4058b:/opt/app/misalign-viz# make plot_by_translator <any words>  # network-by-translators visualization
+  root@370280a4058b:/opt/app/misalign-viz# make plot_indivisual <any words>  # network-by-translator-s for single poem visualization
+  root@370280a4058b:/opt/app/misalign-viz# make plot_overall <any words>  # overall network visualization
+  root@370280a4058b:/opt/app/misalign-viz# make app  # Dashboard
+#+END_SRC
+
+Check docker container ID:
+#+BEGIN_SRC sh 
+  docker ps
+#+END_SRC
+
+Copy artifacts to local path:
+#+BEGIN_SRC sh
+  docker cp <CONTAINER ID>:/opt/app/misalign-viz/artifacts/. artifacts/
+#+END_SRC
+
+#+print_bibliography:

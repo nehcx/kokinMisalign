@@ -1,0 +1,14 @@
+.DS_Store
+*.~undo-tree~
+*.py#
+*.pyc
+*.cpython-38.pyc
+*.html
+.python-version
+.ipynb_checkpoints
+/src/__pycache__/
+/src/methods/__pycache__/
+/artifacts/query_res.pkl
+/query_res.pkl
+/data/translations/.org-src-babel
+/data/translations/auto/

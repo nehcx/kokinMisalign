@@ -1,0 +1,13 @@
+dill==0.3.5.1
+pandas==1.4.3
+omegaconf==2.2.2
+hydra-core==1.2.0
+nltk==3.7.0
+pytest==6.2.2
+leidenalg==0.8.10
+cairocffi==1.3.0
+chart-studio==1.1.0
+dash==2.7.1
+dash-html-components==2.0.0
+dash-core-components==2.0.0
+dash-table==5.0.0
