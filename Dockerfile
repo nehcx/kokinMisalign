@@ -16,5 +16,3 @@ RUN git clone -b master --depth=1 --recursive https://github.com/nehcx/misalignV
 # Python dependencies
 RUN pip install --upgrade pip && \
     pip install -r misalignVis/requirements.txt
-
-CMD ["make app"]
