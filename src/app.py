@@ -120,34 +120,6 @@ app.layout = html.Div(
                         className="control-tab",
                         children=[
                             dcc.Markdown(readme),
-                            # html.H4(
-                            #     className="what-is",
-                            #     children="Intro",
-                            # ),
-                            # html.P(
-                            #     """
-                            #     The Alignment Viewer (MSA) component is used to align
-                            #     multiple genomic or proteomic sequences from a FASTA or
-                            #     Clustal file. Among its extensive set of features,
-                            #     the multiple sequence alignment viewer can display
-                            #     multiple subplots showing gap and conservation info,
-                            #     alongside industry standard colorscale support and
-                            #     consensus sequence. No matter what size your alignment
-                            #     is, Alignment Viewer is able to display your genes or
-                            #     proteins snappily thanks to the underlying WebGL
-                            #     architecture powering the component. You can quickly
-                            #     scroll through your long sequence with a slider or a
-                            #     heatmap overview.
-                            #     """
-                            # ),
-                            # html.P(
-                            #     """
-                            #     Note that the AlignmentChart only returns a chart of
-                            #     the sequence, while AlignmentViewer has integrated
-                            #     controls for colorscale, heatmaps, and subplots allowing
-                            #     you to interactively control your sequences.
-                            #     """
-                            # ),
                         ],
                     ),
                 ),
