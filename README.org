@@ -77,7 +77,10 @@ Use the Dashboard.
 #+END_SRC
 
 ** Replication
-Replication via [[https://docker.com][Docker]] or notebook [[https://github.com/nehcx/misalignVis/blob/master/replication.ipynb][notebook]].
+Replication via [[https://docker.com][Docker]] or notebook
+[[https://github.com/nehcx/misalignVis/blob/master/replication.ipynb][notebook]]/[[https://colab.research.google.com/drive/1tx1CmVssgJJ8MfsBTnRrYJ-GUyP3F2-L#scrollTo=AKwgFnwoe1VQ][Google
+Colaboratory]]. Google colab version provide graphviz visualization
+replication. 
 
 Procedure of replication via [[https://docker.com][Docker]] is as follows.
 
