@@ -11,7 +11,7 @@ visualization tools for the above purposes.
 
 ** Requirements
 The repository works with python 3.8.3, requiring python libraries
-listed in [[https://github.com/nehcx/misalignVis/blob/master/requirements.txt][requirements.lock]].
+listed in [[https://github.com/nehcx/misalignVis/blob/master/requirements.txt][requirements.txt]].
 
 ** Data
 *** /Kokin Wakashū/ 古今和歌集
@@ -59,9 +59,9 @@ both of the two direction).
 
 | model     | source → target | target → source | intersection |
 |-----------+-----------------+-----------------+--------------|
-| precision |           58.62 |           39.26 |        74.27 |
-| recall    |           77.12 |           88.58 |        74.11 |
-| AER       |           33.93 |           46.95 |        25.80 |
+| precision |           54.87 |           37.18 |        69.77 |
+| recall    |           61.24 |           71.49 |        55.86 |
+| AER       |           42.47 |           53.85 |        37.40 |
 
 The calculation was based on the matching ratio of the wlsp codes of
 aligned word pairs. Compared to manual evaluation, this calculation
