@@ -27,10 +27,14 @@ def _filter(alignment_info_lst):
     """To remove edges that contain the same nodes with source nodes and stop pos."""
     for alignment_info in alignment_info_lst:
         source, target = alignment_info.alignment
+        
         # BG-16: symbols
         # BG-0[456789]: words that are not nouns, verbs or adjectives
         # BG-03-1000: demonstratives
-        pattern = re.compile(r'BG-16|BG-0[456789]|BG-03-1000')
+        # BG-01-1000-01/BG-01-1700-02: demonstratives 
+        # BG-02-1110-02: passive
+        #
+        pattern = re.compile(r'BG-16|BG-0[456789]|BG-03-1000|BG-01-1000-01|BG-02-1110-02|BG-01-1700-02')
         if pattern.match(target):
             continue
         if source[3:15] == target[3:15]:
