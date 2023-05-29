@@ -57,18 +57,25 @@ texts. The accuracy information was calculated with [[https://github.com/nehcx/m
 the following table (intersection means alignment that was inferred by
 both of the two direction).
 
-| model     | source → target | target → source | intersection |
-|-----------+-----------------+-----------------+--------------|
-| precision |           54.87 |           37.18 |        69.77 |
-| recall    |           61.24 |           71.49 |        55.86 |
-| AER       |           42.47 |           53.85 |        37.40 |
+#+BEGIN_SRC sh :results raw
+  make accuracy
+#+END_SRC
+
+#+RESULTS[7f435add1cc23d88ce3b2ff1057c2e4e1ddaabf0]:
+cd src; python accuracy.py; column -s, -t ../artifacts/accuracy.csv
+model      source → target  target → source  bidirection
+precision  55.41            38.25            69.85
+recall     61.68            72.54            56.43
+AER        41.97            52.78            37.01
 
 The calculation was based on the matching ratio of the wlsp codes of
 aligned word pairs. Compared to manual evaluation, this calculation
 count many correct cases as wrong, which may cause the accuracy to be
-reletively low.
+reletively low. The results is in the case of =iteration==8= in IBM
+model 2.
 
 ** Usage
+
 Use the Dashboard.
 #+BEGIN_SRC sh :results raw
   git clone -b master --depth=1 --recursive https://github.com/nehcx/misalignVis.git  # Clone the repository
