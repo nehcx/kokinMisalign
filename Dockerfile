@@ -11,8 +11,8 @@ RUN apt-get -y update && \
     apt-get install -y python-igraph 
 
 # Code
-RUN git clone -b master --depth=1 --recursive https://github.com/nehcx/misalignVis
+RUN git clone -b master --depth=1 --recursive https://github.com/nehcx/kokinMisalign
 
 # Python dependencies
 RUN pip install --upgrade pip && \
-    pip install -r misalignVis/requirements.txt
+    pip install -r kokinMisalign/requirements.txt

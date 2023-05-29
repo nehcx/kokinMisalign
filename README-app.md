@@ -1,4 +1,4 @@
-# [misalignVis](https://github.com/nehcx/misalignVis)
+# [kokinMisalign](https://github.com/nehcx/kokinMisalign)
 
 This repository was created to present clues to access the connotation
 of classical poetic Japanese vocabulary, a.k.a. words used in *Waka*
@@ -28,7 +28,7 @@ The data format follows so-called [hachidai.db database format](https://github.c
 
 The complete list of the contemporary Japanese translations of *Kokin
 Wakashū* used in the repository can be found in
-[raw\_data.bib](https://github.com/nehcx/misalignVis/blob/master/data/translations/raw_data.bib).
+[raw\_data.bib](https://github.com/nehcx/kokinMisalign/blob/master/data/translations/raw_data.bib).
 
 All texts were tokenized with the same format with [the *Hachidaishū*
 dataset](https://github.com/yamagen/hachidaishu). Part of raw data was stripped off for not infringing the full
