@@ -62,11 +62,13 @@ both of the two direction).
 #+END_SRC
 
 #+RESULTS[7f435add1cc23d88ce3b2ff1057c2e4e1ddaabf0]:
+#+begin_example
 cd src; python accuracy.py; column -s, -t ../artifacts/accuracy.csv
 model      source → target  target → source  bidirection
 precision  55.41            38.25            69.85
 recall     61.68            72.54            56.43
 AER        41.97            52.78            37.01
+#+end_example
 
 The calculation was based on the matching ratio of the wlsp codes of
 aligned word pairs. Compared to manual evaluation, this calculation
@@ -75,8 +77,7 @@ reletively low. The results is in the case of =iteration==8= in IBM
 model 2.
 
 ** Usage
-
-Use the Dashboard.
+After installing the requirements we can use the Dashboard for visualization.
 #+BEGIN_SRC sh :results raw
   git clone -b master --depth=1 --recursive https://github.com/nehcx/kokinMisalign.git  # Clone the repository
   cd kokinMisalign
