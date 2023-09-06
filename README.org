@@ -129,35 +129,35 @@ We provide the mapping from tables and figures in the paper to the
 path as follows:
 
 - Workflow examples for Implementation A (Figure 7):
-  https://github.com/nehcx/kokinMisalign/tree/master/artifacts/results/ominaeshi-dash-heatmap.svg][(a)]]
-  https://github.com/nehcx/kokinMisalign/tree/master/artifacts/results/ominaeshi-226-dash-network.svg][(b)]]
-  https://github.com/nehcx/kokinMisalign/tree/master/artifacts/results/ominaeshi-dash-network.svg][(c)]]
+  - [[https://github.com/nehcx/kokinMisalign/tree/master/artifacts/results/ominaeshi-dash-heatmap.svg][(a)]]
+  - [[https://github.com/nehcx/kokinMisalign/tree/master/artifacts/results/ominaeshi-226-dash-network.svg][(b)]]
+  - [[https://github.com/nehcx/kokinMisalign/tree/master/artifacts/results/ominaeshi-dash-network.svg][(c)]]
 - Workflow examples for Implementation B (Figure 8):
-  https://github.com/nehcx/kokinMisalign/tree/master/supplementary_materials/plum-OP.svg][(a)]]
-  https://github.com/nehcx/kokinMisalign/tree/master/supplementary_materials/plum-CT.svg][(b)]]
-  https://github.com/nehcx/kokinMisalign/tree/master/supplementary_materials/plum-opISct.svg][(c)]]
-  https://github.com/nehcx/kokinMisalign/tree/master/supplementary_materials/plum-OP056CT155-RS-e.svg][(d)]]
+  - [[https://github.com/nehcx/kokinMisalign/tree/master/supplementary_materials/plum-OP.svg][(a)]]
+  - [[https://github.com/nehcx/kokinMisalign/tree/master/supplementary_materials/plum-CT.svg][(b)]]
+  - [[https://github.com/nehcx/kokinMisalign/tree/master/supplementary_materials/plum-opISct.svg][(c)]]
+  - [[https://github.com/nehcx/kokinMisalign/tree/master/supplementary_materials/plum-OP056CT155-RS-e.svg][(d)]]
 - Workflow examples for Implementation B (Table 4):
-  https://github.com/nehcx/kokinMisalign/tree/master/supplementary_materials/plum-CT155e.md][(Comtemporary translation)]]  
-  https://github.com/nehcx/kokinMisalign/tree/master/supplementary_materials/plum-OP056e.md][(Original poem)]]
+  - [[https://github.com/nehcx/kokinMisalign/tree/master/supplementary_materials/plum-CT155e.md][(Comtemporary translation)]]  
+  - [[https://github.com/nehcx/kokinMisalign/tree/master/supplementary_materials/plum-OP056e.md][(Original poem)]]
 - Results for `plum' (Figure 9):
-  https://github.com/nehcx/kokinMisalign/tree/master/artifacts/results/ume.svg][(a)]]
-  https://github.com/nehcx/kokinMisalign/tree/master/supplementary_materials/results_implementation_2/umeOP56CT155.svg][(b)]]
+  - [[https://github.com/nehcx/kokinMisalign/tree/master/artifacts/results/ume.svg][(a)]]
+  - [[https://github.com/nehcx/kokinMisalign/tree/master/supplementary_materials/results_implementation_2/umeOP56CT155.svg][(b)]]
 - Results for `ominaeshi' (Figure 10):
-  https://github.com/nehcx/kokinMisalign/tree/master/artifacts/results/ominaeshi.svg][(a)]]
-  https://github.com/nehcx/kokinMisalign/tree/master/supplementary_materials/results_implementation_2/ominaeshiOP3CT14.svg][(b)]]
+  - [[https://github.com/nehcx/kokinMisalign/tree/master/artifacts/results/ominaeshi.svg][(a)]]
+  - [[https://github.com/nehcx/kokinMisalign/tree/master/supplementary_materials/results_implementation_2/ominaeshiOP3CT14.svg][(b)]]
 - Results for `chrysanthemum' (Figure 11):
-  https://github.com/nehcx/kokinMisalign/tree/master/artifacts/results/kiku.svg][(a)]]
-  https://github.com/nehcx/kokinMisalign/tree/master/supplementary_materials/results_implementation_2/kikuOP3CT13.svg][(b)]]
+  - [[https://github.com/nehcx/kokinMisalign/tree/master/artifacts/results/kiku.svg][(a)]]
+  - [[https://github.com/nehcx/kokinMisalign/tree/master/supplementary_materials/results_implementation_2/kikuOP3CT13.svg][(b)]]
 - Results for `cherry' (Figure 12):
-  https://github.com/nehcx/kokinMisalign/tree/master/artifacts/results/sakura.svg][(a)]]
-  https://github.com/nehcx/kokinMisalign/tree/master/supplementary_materials/results_implementation_2/sakuraOP3CT14.svg][(b)]]
+  - [[https://github.com/nehcx/kokinMisalign/tree/master/artifacts/results/sakura.svg][(a)]]
+  - [[https://github.com/nehcx/kokinMisalign/tree/master/supplementary_materials/results_implementation_2/sakuraOP3CT14.svg][(b)]]
 - Results for `pine' (Figure 13):
-  https://github.com/nehcx/kokinMisalign/tree/master/artifacts/results/matsu.svg][(a)]]
-  https://github.com/nehcx/kokinMisalign/tree/master/supplementary_materials/results_implementation_2/matsuOP5CT15.svg][(b)]]
+  - [[https://github.com/nehcx/kokinMisalign/tree/master/artifacts/results/matsu.svg][(a)]]
+  - [[https://github.com/nehcx/kokinMisalign/tree/master/supplementary_materials/results_implementation_2/matsuOP5CT15.svg][(b)]]
 - Results for `kerria' (Figure 14):
-  https://github.com/nehcx/kokinMisalign/tree/master/artifacts/results/yamabuki.svg][(a)]]
-  https://github.com/nehcx/kokinMisalign/tree/master/supplementary_materials/results_implementation_2/yamabukiOP3CT11.svg][(b)]]
+  - [[https://github.com/nehcx/kokinMisalign/tree/master/artifacts/results/yamabuki.svg][(a)]]
+  - [[https://github.com/nehcx/kokinMisalign/tree/master/supplementary_materials/results_implementation_2/yamabukiOP3CT11.svg][(b)]]
 - Other figures for conceptualization can be found in
   [[./supplementary_materials/][supplementary materials]].    
 
