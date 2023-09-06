@@ -19,7 +19,7 @@ The /Kokin Wakashū/ (ca. 905) is an anthology of classical Japanese
 poetry. The /Kokin Wakashū/ dataset is obtained from
 [[https://github.com/yamagen/hachidaishu][the /Hachidaishū/ dataset]].
 
-The data format follows so-called [[https://github.com/idiig/misalign-viz/tree/master/data/hachidaishu#hachidaidb-database-format][hachidai.db database format]].
+The data format follows so-called [[https://github.com/idiig/kokin-misalign/tree/master/data/hachidaishu#hachidaidb-database-format][hachidai.db database format]].
 
 *** 10 contemporary Japanese translations
 The complete list of the contemporary Japanese translations of /Kokin
@@ -95,24 +95,24 @@ Procedure of replication via [[https://docker.com][Docker]] is as follows.
 #+BEGIN_SRC sh :results raw
   git clone https://github.com/nehcx/kokinMisalign.git  # Clone the repository
   cd kokinMisalign
-  docker build --no-cache -t nehcx/kokinMisalign .  
+  docker build --no-cache -t nehcx/kokin-misalign .  
 #+END_SRC
 
 Excute the following:
 #+BEGIN_SRC sh
-  docker run -it --rm nehcx/kokinMisalign bash  # enter bash
-  root@370280a4058b:/opt/app# cd kokinMisalign/
-  root@370280a4058b:/opt/app/misalign-viz# make build_bitext  # make bitexts.csv
-  root@370280a4058b:/opt/app/misalign-viz# make build_metacode2lemma_dict  # make metacode2lemma dictionary
-  root@370280a4058b:/opt/app/misalign-viz# make train_save_ibm2  # train and save ibm model 2
-  root@370280a4058b:/opt/app/misalign-viz# make save_db  # Save database for query
-  root@370280a4058b:/opt/app/misalign-viz# make basic_stat  # Save database basic statistic description
-  root@370280a4058b:/opt/app/misalign-viz# make accuracy  # Save precision, recall and AER
-  root@370280a4058b:/opt/app/misalign-viz# make plot_aligment <any words>  # alignment visualization
-  root@370280a4058b:/opt/app/misalign-viz# make plot_by_translator <any words>  # network-by-translators visualization
-  root@370280a4058b:/opt/app/misalign-viz# make plot_indivisual <any words>  # network-by-translator-s for single poem visualization
-  root@370280a4058b:/opt/app/misalign-viz# make plot_overall <any words>  # overall network visualization
-  root@370280a4058b:/opt/app/misalign-viz# make app  # Dashboard
+  docker run -it --rm nehcx/kokin-misalign bash  # enter bash
+  root@370280a4058b:/opt/app# cd kokin-misalign/
+  root@370280a4058b:/opt/app/kokin-misalign# make build_bitext  # make bitexts.csv
+  root@370280a4058b:/opt/app/kokin-misalign# make build_metacode2lemma_dict  # make metacode2lemma dictionary
+  root@370280a4058b:/opt/app/kokin-misalign# make train_save_ibm2  # train and save ibm model 2
+  root@370280a4058b:/opt/app/kokin-misalign# make save_db  # Save database for query
+  root@370280a4058b:/opt/app/kokin-misalign# make basic_stat  # Save database basic statistic description
+  root@370280a4058b:/opt/app/kokin-misalign# make accuracy  # Save precision, recall and AER
+  root@370280a4058b:/opt/app/kokin-misalign# make plot_aligment <any words>  # alignment visualization
+  root@370280a4058b:/opt/app/kokin-misalign# make plot_by_translator <any words>  # network-by-translators visualization
+  root@370280a4058b:/opt/app/kokin-misalign# make plot_indivisual <any words>  # network-by-translator-s for single poem visualization
+  root@370280a4058b:/opt/app/kokin-misalign# make plot_overall <any words>  # overall network visualization
+  root@370280a4058b:/opt/app/kokin-misalign# make app  # Dashboard
 #+END_SRC
 
 Check docker container ID:
@@ -122,7 +122,7 @@ Check docker container ID:
 
 Copy artifacts to local path:
 #+BEGIN_SRC sh
-  docker cp <CONTAINER ID>:/opt/app/misalign-viz/artifacts/. artifacts/
+  docker cp <CONTAINER ID>:/opt/app/kokin-misalign/artifacts/. artifacts/
 #+END_SRC
 
 ** Figures and tables
