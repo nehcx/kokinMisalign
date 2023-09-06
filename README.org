@@ -160,6 +160,50 @@ path as follows:
   - [[https://github.com/nehcx/kokinMisalign/tree/master/artifacts/results/yamabuki.svg][(a)]]
   - [[https://github.com/nehcx/kokinMisalign/tree/master/supplementary_materials/results_implementation_2/yamabukiOP3CT11.svg][(b)]]
 - Other figures for conceptualization can be found in
-  [[./supplementary_materials/][supplementary materials]].    
+  [[./supplementary_materials/][supplementary materials]].
 
-#+print_bibliography:
+** References
+#+begin_example
+@article{brown_mathematics_1993,
+  title    = {The Mathematics of Statistical Machine Translation: Parameter Estimation},
+  author   = {Brown, Peter E and Pietra, Vincent J Della and Pietra, Stephen A Della and Mercer, Robert L},
+  year     = {1993},
+  journal  = {Computational Linguistics},
+  volume   = {19},
+  number   = {2},
+  pages    = {263--311},
+  language = {en}
+}
+
+@article{chen_connotation_2022,
+  title     = {Tango Araimento no Ayamari Taioo wo motiita Utakotoba no Konoteeshon Kenshutsu/Connotation Detection for Classical Poetic Japanese Vocabulary Using Word Alignment Mismatch},
+  author    = {Chen, Xudong and Hodo{\v s}{\v c}ek, Bor and Yamamoto, Hilofumi},
+  year      = {2022},
+  journal   = {Proceedings of Symposium for Humanities and Computer 2022},
+  volume    = {Vol. 2022},
+  number    = {No. 1},
+  pages     = {111--118},
+  publisher = {Information Processing Society of Japan},
+  language  = {ja}
+}
+
+@inproceedings{hodoscek_development_2022,
+  title     = {Development of Datasets of the {{Hachidaish\=u}} and Tools for the Understanding of the Characteristics and Historical Evolution of Classical {{Japanese}} Poetic Vocabulary},
+  booktitle = {Digital Humanities 2022 Conference Abstracts},
+  author    = {Hodo{\v s}{\v c}ek, Bor and Yamamoto, Hilofumi},
+  year      = {2022},
+  pages     = {647--648},
+  publisher = {The University of Tokyo},
+  address   = {Tokyo}
+}
+
+@phdthesis{yamamoto_mathematical_2005,
+  title     = {A Mathematical Analysis of the Connotations of Classical Japanese Poetic Vocabulary},
+  author    = {Yamamoto, Hilofumi},
+  year      = {2005},
+  address   = {Canberra},
+  copyright = {Author retains copyright},
+  language  = {en\_AU},
+  school    = {The Austrilian National University}
+}
+#+end_example
